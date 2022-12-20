@@ -38,8 +38,14 @@ function decrypt(key, encr_text, algorithm) {
     else {
         output = "No dycryption algorithm selected"
     }
-        
-    document.getElementById("res").innerHTML = output
+    
+    if (output == ""){
+        document.getElementById("res").innerHTML = "WRONG INPUT OR ALGORITHM"
+    }
+    else{
+        document.getElementById("res").innerHTML = output    
+    }
+    
 }
 
 var choice=document.getElementById("opperation")
