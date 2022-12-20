@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title >Encrypt/Decrypt</title>
+</head>
+<body>
+    
+    <div class="suspended_form">
+        
+
+        <div class="box">
+            <h1 class="title">Encrypt/Decrypt</h1>
+        </div>
+   
+        <form id="myForm">
+            <div class="box">
+                <label for="text" class="header">Enter text to encrypt/decrypt </label>
+                <textarea name="text" id="text" cols="35" rows="5"></textarea><br>
+                <button type="button" class="paste_button" id="paste">Paste</button>
+            </div>
+            <br>
+            <div class="box">
+                <label id="key_label" class="key" for="key">Key</label>
+                <input type="text" name="key" id="key" placeholder="Set key ..."><br>
+            </div>
+            <br>
+            <br>
+            
+            <div class="box">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label >Select Algorithm</label>
+                <select name="algorithm" id="algorithm">
+                    <option value="AES">AES</option>
+                    <option value="DES">DES</option>
+                    <option value="3_DES">Triple DES</option>
+                    <option value="OTP">OTP</option>
+                </select>
+            </div>
+            
+            <br>
+            <div class="box">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" id="opperation" name="opperation" value="enc">
+                <label for="Encrypt">Encrypt</label>
+                <input type="radio" id="opperation2" name="opperation" value="dec">
+                <label for="Decrypt">Decrypt</label>
+
+            </div>
+            <br>
+
+            
+
+            <button id="submit_button" class="submit_button" type="submit" id="submit">Submit</button>
+            
+        </form>
+
+        <div class="box">
+            <div class="result">
+                <textarea  id="res" cols="35" rows="3">result goes Here ...</textarea >
+            </div>
+            <div class="copy_btn">
+                <button class="copy_button" id="copy" disabled>Copy</button>
+            </div>
+            <p id="warning"></p>
+        </div>
+
+    </div>
+
+    <script src="./onetimepad.js"></script>
+    <script src="./crypto-js.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
